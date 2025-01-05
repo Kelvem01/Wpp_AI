@@ -1,0 +1,5 @@
+chromadb
+langchain-huggingface
+tokenizers
+transformers
+aiohttp==3.11.11

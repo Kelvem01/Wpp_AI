@@ -1,0 +1,21 @@
+1- rodar esse comando para subir primeiro o Waha 
+docker-compose up --build waha
+2-rodar esse comando para subir a api da aplicaçao
+docker-compose up --build api 
+
+
+http://api:5000/chatbot/webhook/
+
+
+caso de conflito nas depdendencias Crie um arquivo requirements.in com todas as dependências, mas remova as versões conflitantes:
+adicione no arquivo os items abaixo:
+chromadb
+langchain-huggingface
+tokenizers
+transformers
+aiohttp==3.11.11
+
+Compile as dependências:
+comandos no bash:
+pip-compile requirements.in
+pip-sync
