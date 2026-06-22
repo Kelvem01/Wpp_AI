@@ -40,5 +40,3 @@ class Waha:
             'chatId': chat_id,
         })
 
-if __name__ == '__main__':
-    waha = Waha()
