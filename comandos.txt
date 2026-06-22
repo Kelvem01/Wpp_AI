@@ -1,0 +1,15 @@
+1- Subir tudo (WAHA + API):
+docker-compose up --build
+
+2- Webhook:
+http://api:5000/chatbot/webhook/
+
+3- Health check:
+http://api:5000/health
+
+4- Popular a base RAG (opcional):
+docker-compose exec api python bot/rag/rag.py
+
+5- Compilar dependências (se alterar requirements.in):
+pip-compile requirements.in
+pip-sync

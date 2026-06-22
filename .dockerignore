@@ -1,0 +1,7 @@
+bot_venv
+.env
+.git
+.gitignore
+chroma_data
+__pycache__
+*.pyc

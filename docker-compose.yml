@@ -3,17 +3,20 @@ services:
     image: devlikeapro/waha:latest
     container_name: wpp_bot_waha
     restart: always
-
     ports:
-    - "3000:3000"
+      - "3000:3000"
 
   api:
     build:
       context: .
       dockerfile: Dockerfile.api
     container_name: wpp_bot_api
+    restart: always
+    depends_on:
+      - waha
     ports:
       - "5000:5000"
+    env_file:
+      - .env
     volumes:
-      - .:/app
       - ./chroma_data:/app/chroma_data
